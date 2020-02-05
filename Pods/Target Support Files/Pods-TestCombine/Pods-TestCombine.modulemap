@@ -1,0 +1,6 @@
+module Pods_TestCombine {
+  umbrella header "Pods-TestCombine-umbrella.h"
+
+  export *
+  module * { export * }
+}

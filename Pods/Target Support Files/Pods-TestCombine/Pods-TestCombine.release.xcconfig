@@ -1,0 +1,16 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/GirdersSwift/framework"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/PromiseKit"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/GirdersSwift" "${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess" "${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBeaver"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/GirdersSwift/GirdersSwift.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess/KeychainAccess.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit/PromiseKit.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBeaver/SwiftyBeaver.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"GirdersSwift" -l"KeychainAccess" -l"PromiseKit" -l"SwiftyBeaver" -framework "Foundation" -framework "GRSecurity" -framework "Security" -framework "UIKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/GirdersSwift/GirdersSwift.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess/KeychainAccess.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit/PromiseKit.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBeaver/SwiftyBeaver.modulemap"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=Debug] = DEBUG
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/GirdersSwift" "${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess" "${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBeaver" $(PODS_ROOT)/GirdersSwift
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
